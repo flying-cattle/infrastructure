@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 /**
  * MD5通用类
  * 
- * @author BianPeng
+ * @author flying-cattle
  * @since 2019.04.25
  * @version 1.0.0_1
  * 

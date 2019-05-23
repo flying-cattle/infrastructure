@@ -1,7 +1,7 @@
 /**
  * Base64Utils 2019年4月9日
  * @project item-common  V1.0
- * Copyright(c) 2019 BianPeng Co. Ltd. 
+ * Copyright(c) 2019 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.item.util;

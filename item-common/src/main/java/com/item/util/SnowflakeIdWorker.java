@@ -2,7 +2,7 @@
  * Copyright © 2019 dream horse Info. Tech Ltd. All rights reserved.
  * 
  * @Package: com.item.util 
- * @author: BianPeng  
+ * @author: flying-cattle  
  * @date: 2019年4月11日 下午3:13:41 
  */
 package com.item.util;
@@ -26,7 +26,7 @@ import java.net.UnknownHostException;
  * SnowFlake的优点是，整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，经测试，SnowFlake每秒能够产生26万ID左右。
  * 
  * @version: v1.0.0
- * @author: BianPeng
+ * @author: flying-cattle
  * @date: 2019年4月11日 
  */
 public class SnowflakeIdWorker {
