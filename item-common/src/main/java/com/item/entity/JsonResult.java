@@ -1,9 +1,12 @@
-package com.item.util;
+package com.item.entity;
 
 import java.io.Serializable;
 import java.net.ConnectException;
 import java.sql.SQLException;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**   
  * Copyright: Copyright (c) 2019 
@@ -18,22 +21,20 @@ import lombok.Data;
  * 2019/4/9 	flying-cattle  V1.0            initialize
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class JsonResult<T> implements Serializable{
 	
 	private static final long serialVersionUID = 1071681926787951549L;
 
-	/**
-     * <p>返回状态</p>
-     */
-    private Boolean isTrue=true;
     /**
-     *<p> 状态码</p>
+     *<p>状态码</p>
      */
     private String code;
     /**
      * <p>业务码</p>
      */
-    private String type;
+    private String operate;
     /**
      *<p> 状态说明</p>
      */
@@ -43,25 +44,40 @@ public class JsonResult<T> implements Serializable{
      */
     private T data;
    
-	/**
-     * <p>返回成功</p>
-     * @param type 业务码
-     * @param message 错误说明
-     * @param data 数据
+    /**
+     * <p>返回成功,有数据</p>
      */
-    public JsonResult(String type, String message, T data) {
-        this.isTrue=true;
-        this.code ="0000";
-        this.type=type;
-        this.message = message;
-        this.data=data;
+    public JsonResult<T> success(T data) {
+    	this.setCode(Const.CODE_SUCCESS);
+    	this.setOperate(Const.OPERATE_SUCCESS);
+    	this.setMessage("操作成功！");
+    	this.setData(data);
+    	return this;
     }
-    public JsonResult() {
-        this.isTrue=true;
-        this.code ="0000";
+
+    /**
+     * <p>返回成功,无数据</p>
+     */
+    public JsonResult<T> success() {
+    	this.setCode(Const.CODE_SUCCESS);
+    	this.setOperate(Const.OPERATE_SUCCESS);
+    	this.setMessage("操作成功！");
+    	this.setData(null);
+    	return this;
+
+    }
+    /**
+     * <p>返回成功,无数据</p>
+     */
+    public JsonResult<T> error(String message) {
+    	this.setCode(Const.CODE_FAILED);
+    	this.setOperate(Const.OPERATE_FAILED);
+    	this.setMessage(message);
+    	this.setData(null);
+    	return this;
     }
     public JsonResult(Throwable throwable) {
-        this.isTrue=false;
+    	this.operate=Const.OPERATE_FAILED;
         if(throwable instanceof NullPointerException){
             this.code= "1001";
             this.message="空指针："+throwable;
