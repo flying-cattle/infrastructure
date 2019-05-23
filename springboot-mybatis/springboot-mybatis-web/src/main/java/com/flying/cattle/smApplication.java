@@ -1,7 +1,7 @@
 /**
  * @filename: WalletSignApplication.java 2019-04-16
  * @project wallet-sign-web  V1.0
- * Copyright(c) 2018 BianPeng Co. Ltd. 
+ * Copyright(c) 2018 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle;
@@ -16,12 +16,12 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
  * 
  * <p>说明：启动类</P>
  * @version: V1.0
- * @author: BianPeng
+ * @author: flying-cattle
  * 
  * Modification History:
  * Date         	Author          Version        Description
  *-------------------------------------------------------------*
- * 2019-04-16     	BianPeng    	V1.0           initialize
+ * 2019-04-16     	flying-cattle    	V1.0           initialize
  */
 @SpringBootApplication
 public class smApplication {

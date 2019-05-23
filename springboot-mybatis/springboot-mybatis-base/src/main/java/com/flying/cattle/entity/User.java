@@ -1,7 +1,7 @@
 /**
  * @filename:User 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2018 BianPeng Co. Ltd. 
+ * Copyright(c) 2018 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.entity;
@@ -23,12 +23,12 @@ import java.io.Serializable;
  * 
  * <p>说明： 用户实体类</P>
  * @version: V1.0
- * @author: BianPeng
+ * @author: flying-cattle
  * 
  * Modification History:
  * Date         	Author          Version          Description
  *---------------------------------------------------------------*
- * 2019年5月20日      BianPeng    V1.0           initialize
+ * 2019年5月20日      flying-cattle    V1.0           initialize
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

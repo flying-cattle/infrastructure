@@ -1,7 +1,7 @@
 /**
  * @filename: ExceptionInterceptor 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2018 BianPeng Co. Ltd. 
+ * Copyright(c) 2018 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.interceptor;
@@ -19,7 +19,7 @@ import com.github.flying.cattle.mdg.aid.JsonResult;
  * 
  * <p>说明： 全局异常处理</P>
  * @version: V1.0
- * @author: BianPeng
+ * @author: flying-cattle
  * 
  */
 @ControllerAdvice

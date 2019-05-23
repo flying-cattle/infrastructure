@@ -1,7 +1,7 @@
 /**
  * @filename: IllegalPathException 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2018 BianPeng Co. Ltd. 
+ * Copyright(c) 2018 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.aid;
@@ -14,7 +14,7 @@ import lombok.Setter;
  * 
  * <p>说明： 路径视图等异常请求处理</P>
  * @version: V1.0
- * @author: BianPeng
+ * @author: flying-cattle
  * 
  */
 public class IllegalPathException extends Exception {

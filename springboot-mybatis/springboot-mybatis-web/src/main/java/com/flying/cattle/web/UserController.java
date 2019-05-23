@@ -1,7 +1,7 @@
 /**
  * @filename:UserController 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2020 BianPeng Co. Ltd. 
+ * Copyright(c) 2020 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.web;
@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
  * 
  * <p>说明： 用户API接口层</P>
  * @version: V1.0
- * @author: BianPeng
+ * @author: flying-cattle
  *
  */
 @Api(description = "用户",value="用户" )

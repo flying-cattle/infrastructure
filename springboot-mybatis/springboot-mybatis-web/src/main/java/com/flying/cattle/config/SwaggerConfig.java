@@ -1,7 +1,7 @@
 /**
  * @filename:UserController 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2020 BianPeng Co. Ltd. 
+ * Copyright(c) 2020 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.config;
@@ -21,7 +21,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * <p>自动生成工具：mybatis-dsc-generator</p>
  * Swagger核心配置文件
  * ========================
- * @author BianPeng 
+ * @author flying-cattle 
  * @Date   2019年5月20日
  * ========================
  */
@@ -33,7 +33,7 @@ public class SwaggerConfig {
     private static String port;
 	
 	public static String CONTROLLER_URL="com.flying.cattle.web";    //Swagger扫描的接口路径
-	public static String SWAGGER_TITLE="API文档-BianPeng"; 	    		//Swagger接口文档标题
+	public static String SWAGGER_TITLE="API文档-flying-cattle"; 	    		//Swagger接口文档标题
 	public static String SWAGGER_DESCRIPTION="API文档";   				//Swagger接口文档描述
 	public static String SWAGGER_VERSION="1.0";                         //Swagger接口文档版本
 	public final static String SWAGGER_URL="http://127.0.0.1:"+port;    //Swagger项目服务的URL

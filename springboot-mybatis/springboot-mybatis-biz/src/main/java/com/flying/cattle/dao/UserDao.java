@@ -1,7 +1,7 @@
 /**
  * @filename:UserDao 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2018 BianPeng Co. Ltd. 
+ * Copyright(c) 2018 flying-cattle Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.dao;
@@ -15,12 +15,12 @@ import com.flying.cattle.entity.User;
  * 
  * <p>说明： 用户数据访问层</p>
  * @version: V1.0
- * @author: BianPeng
+ * @author: flying-cattle
  * 
  * Modification History:
  * Date         	Author          Version          Description
  *---------------------------------------------------------------*
- * 2019年5月20日      BianPeng    V1.0         initialize
+ * 2019年5月20日      flying-cattle    V1.0         initialize
  */
 @Mapper
 public interface UserDao extends BaseMapper<User> {
