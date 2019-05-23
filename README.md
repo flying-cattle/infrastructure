@@ -2,7 +2,7 @@
 以Spring Boot和Mybatis 整理一些基础架构集合（聚合工程）
 
 # 使用说明
-item-parent：
+item-parent：<br/>
         是一个父级项目，打包方式是POM，作用：控制其下所有子项目的jar包版本，利于项目包版本统一、项目版本统一升级，降低所用包版本迭代快的影响。
 
 item-common:
