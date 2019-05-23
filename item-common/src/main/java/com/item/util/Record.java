@@ -4,7 +4,7 @@
  * Copyright(c) 2018 BianP Co. Ltd. 
  * All right reserved. 
  */
-package com.item.entity;
+package com.item.util;
 
 import java.util.Collection;
 import java.util.HashMap;

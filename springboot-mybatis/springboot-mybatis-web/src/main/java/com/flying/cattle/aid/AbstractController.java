@@ -1,7 +1,7 @@
 /**
- * @filename: AbstractController 2019年5月20日
+ * @filename:UserController 2019年5月20日
  * @project springboot-mybatis  V1.0
- * Copyright(c) 2018 BianPeng Co. Ltd. 
+ * Copyright(c) 2020 BianPeng Co. Ltd. 
  * All right reserved. 
  */
 package com.flying.cattle.aid;
@@ -14,23 +14,19 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.item.entity.JsonResult;
-import com.item.entity.PageParam;
+import com.github.flying.cattle.mdg.aid.JsonResult;
+import com.github.flying.cattle.mdg.aid.PageParam;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 
 /**   
- * Copyright: Copyright (c) 2019 
+ * <p>自动生成工具：mybatis-dsc-generator</p>
  * 
- * <p>说明： 统一API接口层</P>
+ * <p>说明： 用户API接口层</P>
  * @version: V1.0
  * @author: BianPeng
- * 
- * Modification History:
- * Date         	Author          Version         Description
- *-------------------------------------------------------------*
- * 2019年5月20日    		BianPeng    	V1.0        	initialize
+ *
  */
 public class AbstractController<S extends IService<T>,T>{
 	

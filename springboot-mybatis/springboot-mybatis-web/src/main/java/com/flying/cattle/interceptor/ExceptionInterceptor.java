@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.flying.cattle.aid.IllegalPathException;
-import com.item.entity.JsonResult;
+import com.github.flying.cattle.mdg.aid.JsonResult;
 
 /**   
  * Copyright: Copyright (c) 2019 

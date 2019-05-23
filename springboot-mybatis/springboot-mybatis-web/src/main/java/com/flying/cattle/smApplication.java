@@ -24,7 +24,7 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
  * 2019-04-16     	BianPeng    	V1.0           initialize
  */
 @SpringBootApplication
-public class Application {
+public class smApplication {
 	/**
      * <p>分页插件</p>
      */
@@ -34,6 +34,6 @@ public class Application {
     }
     
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(smApplication.class, args);
 	}
 }

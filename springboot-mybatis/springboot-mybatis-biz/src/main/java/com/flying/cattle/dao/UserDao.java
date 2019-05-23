@@ -13,7 +13,7 @@ import com.flying.cattle.entity.User;
 /**   
  * Copyright: Copyright (c) 2019 
  * 
- * <p>说明： 用户数据访问层</P>
+ * <p>说明： 用户数据访问层</p>
  * @version: V1.0
  * @author: BianPeng
  * 

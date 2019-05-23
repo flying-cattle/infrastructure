@@ -40,8 +40,7 @@
 		<dependency>
 			<groupId>com.github.flying-cattle</groupId>
 			<artifactId>mybatis-dsc-generator</artifactId>
-			<version>3.0.1.RELEASE</version>
-			<scope>test</scope>
+			<version>3.0.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 	<build>
