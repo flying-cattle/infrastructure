@@ -10,3 +10,6 @@
         
 <p>springboot-mybatis：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;集成最全的代码生成工具：entity集成lombok、格式校验，swagger；dao自动加@mapper，service自动注释和依赖；Controller实现restful 增删改查API，并集成swagger与生成配置文件。
+
+<p>webFluxTest：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;主要是对spring5的新web框架webflux做了测试性的使用，包含redis-reactive整合与使用，mongodb-reactive的整合与使用。
