@@ -4,7 +4,7 @@
  * Copyright(c) 2018 BianPeng Co. Ltd. 
  * All right reserved. 
  */
-package com.flying.cattle.wf.aid;
+package com.flying.cattle.wf.utils;
 
 
 /**   

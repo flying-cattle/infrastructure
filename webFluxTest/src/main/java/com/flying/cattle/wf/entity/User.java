@@ -14,6 +14,7 @@ import javax.validation.constraints.Pattern;
 import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**   
  * Copyright: Copyright (c) 2019 
@@ -24,14 +25,10 @@ import lombok.Data;
  * 
  */
 @Data
-public class User implements Serializable{
+@EqualsAndHashCode(callSuper=false)
+public class User extends ParentEntity implements Serializable{
 
 	private static final long serialVersionUID = -3440675839637783638L;
-	
-	/**
-	 *	用户ID 
-	 */
-	private Long id;
 	
 	/**
 	 *	用户账号 
@@ -43,7 +40,6 @@ public class User implements Serializable{
 	/**
 	 *	用户密码 
 	 */
-	
 	@NotNull(message = "密码不能为空")
 	@Pattern(regexp = "^[a-zA-Z0-9]{6,20}$",message = "秘密必须是无特殊字符6-20位字符串")
 	private String password;

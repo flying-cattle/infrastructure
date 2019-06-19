@@ -23,19 +23,19 @@ import reactor.core.publisher.Mono;
  */
 public interface RedisService {
 
-	public Mono<String> getById(String key);
+	public Mono<Object> getById(String key);
 	
-	public Mono<String> addUser(String key,User user);
+	public Mono<Object> addUser(String key,User user);
 	
 	public Mono<Boolean> deleteById(String key);
 	
-	public Mono<String> updateById(String key,User user);
+	public Mono<Object> updateById(String key,User user);
 	
-	public Mono<Long> addlist(String key,List<String> list);
+	public Mono<Long> addlist(String key,List<Object> list);
 	
-	public Flux<String> findAll(String key);
+	public Flux<Object> findAll(String key);
 
-	public Flux<String> findUsers(String key);
+	public Flux<Object> findUsers(String key);
 	
 	
 }

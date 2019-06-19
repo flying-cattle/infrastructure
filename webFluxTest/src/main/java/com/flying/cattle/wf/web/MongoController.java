@@ -3,26 +3,24 @@ package com.flying.cattle.wf.web;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSON;
-import com.flying.cattle.wf.aid.ValidationResult;
-import com.flying.cattle.wf.aid.ValidationUtils;
 import com.flying.cattle.wf.entity.User;
 import com.flying.cattle.wf.service.MongoService;
 import com.flying.cattle.wf.service.impl.RedisGenerateId;
+import com.flying.cattle.wf.utils.ValidationResult;
+import com.flying.cattle.wf.utils.ValidationUtils;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/usermg")
-public class UserMongoController {
+@RequestMapping("/mongo")
+public class MongoController {
 	
 	public final static String USER_KEY="user";
 	
@@ -37,6 +35,10 @@ public class UserMongoController {
 		return redisGenerateId.generate(USER_KEY);
 	}
 
+	@GetMapping("/getById")
+	public Mono<User> getById(Long id) {
+		return mongoService.getById(id);
+	}
 	@GetMapping("/add")
 	public Mono<User> add(User user) {
 		user = new User();
@@ -77,6 +79,6 @@ public class UserMongoController {
 	 */
 	@GetMapping(value="/findAll",produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
 	public Flux<User> findAll(){
-		return mongoService.findAllUser().delayElements(Duration.ofSeconds(1));
+		return mongoService.findAllUser();
 	}
 }

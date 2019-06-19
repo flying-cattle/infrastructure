@@ -36,54 +36,53 @@ import reactor.core.publisher.Mono;
 public class RedisServiceImpl implements RedisService {
 
 	@Autowired
-	private ReactiveRedisTemplate<String, String> redisTemplate;
-	
+	private ReactiveRedisTemplate<String, Object> redisTemplate;
 	@Override
-	public Mono<String> getById(String key) {
+	public Mono<Object> getById(String key) {
 		// TODO Auto-generated method stub
-		ReactiveValueOperations<String, String> operations = redisTemplate.opsForValue();
+		ReactiveValueOperations<String, Object> operations = redisTemplate.opsForValue();
 		return operations.get(key);
 	}
 
 	@Override
-	public Mono<String> addUser(String key,User user) {
+	public Mono<Object> addUser(String key,User user) {
 		// TODO Auto-generated method stub
-		ReactiveValueOperations<String, String> operations = redisTemplate.opsForValue();
+		ReactiveValueOperations<String, Object> operations = redisTemplate.opsForValue();
 		return operations.getAndSet(key, JSON.toJSONString(user));
 	}
 
 	@Override
 	public Mono<Boolean> deleteById(String key) {
 		// TODO Auto-generated method stub
-		ReactiveValueOperations<String, String> operations = redisTemplate.opsForValue();
+		ReactiveValueOperations<String, Object> operations = redisTemplate.opsForValue();
 		return operations.delete(key);
 	}
 
 	@Override
-	public Mono<String> updateById(String key,User user) {
+	public Mono<Object> updateById(String key,User user) {
 		// TODO Auto-generated method stub
-		ReactiveValueOperations<String, String> operations = redisTemplate.opsForValue();
+		ReactiveValueOperations<String, Object> operations = redisTemplate.opsForValue();
 		return operations.getAndSet(key, JSON.toJSONString(user));
 	}
 
 	@Override
-	public Flux<String> findAll(String key) {
+	public Flux<Object> findAll(String key) {
 		// TODO Auto-generated method stub
-		ReactiveListOperations<String, String> operations = redisTemplate.opsForList();
+		ReactiveListOperations<String, Object> operations = redisTemplate.opsForList();
 		return operations.range(key, 0, -1);
 	}
 
 
 	@Override
-	public Mono<Long> addlist(String key,List<String> list) {
+	public Mono<Long> addlist(String key,List<Object> list) {
 		// TODO Auto-generated method stub
-		ReactiveListOperations<String, String> operations = redisTemplate.opsForList();
+		ReactiveListOperations<String, Object> operations = redisTemplate.opsForList();
 		return operations.leftPushAll(key, list);
 	}
 	
 	@Override
-	public Flux<String> findUsers(String key) {
-		ReactiveValueOperations<String, String> operations = redisTemplate.opsForValue();
+	public Flux<Object> findUsers(String key) {
+		ReactiveValueOperations<String, Object> operations = redisTemplate.opsForValue();
 		return redisTemplate.keys(key).flatMap(keyId ->operations.get(keyId));
 	}
 }
