@@ -22,30 +22,26 @@ public interface IService<T> {
      */
 	Mono<T> insert(T entity);
     
+    /**
+     * <p>
+     * 根据 ID 删除
+     * </p>
+     * @param id 主键ID
+     */
+	Mono<Void> deleteById(Long id);
     
     /**
      * <p>
      * 根据 ID 删除
      * </p>
-     *
      * @param id 主键ID
      */
-	Mono<Boolean> deleteById(Long id);
-    
-    /**
-     * <p>
-     * 根据 ID 删除
-     * </p>
-     *
-     * @param id 主键ID
-     */
-	Mono<Boolean> delete(T entity);
+	Mono<Void> delete(T entity);
     
     /**
      * <p>
      * 根据 ID 选择修改
      * </p>
-     *
      * @param entity 实体对象
      */
 	Mono<T> updateById(T entity);
@@ -54,7 +50,6 @@ public interface IService<T> {
      * <p>
      * 根据 ID 查询
      * </p>
-     *
      * @param id 主键ID
      */
 	Mono<T> findById(Long id);
@@ -63,7 +58,6 @@ public interface IService<T> {
      * <p>
      * 查询所有
      * </p>
-     *
      */
 	Flux<T> findAll();
 }

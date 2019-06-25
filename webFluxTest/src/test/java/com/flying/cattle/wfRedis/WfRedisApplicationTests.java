@@ -11,6 +11,7 @@ public class WfRedisApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
 	}
 
 }

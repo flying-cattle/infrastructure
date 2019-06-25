@@ -2,7 +2,6 @@ package com.flying.cattle.wf.aid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -25,17 +24,15 @@ public class ServiceImpl<M extends ReactiveMongoRepository<T,Long>, T> implement
 	}
 
 	@Override
-	public Mono<Boolean> deleteById(Long id) {
+	public Mono<Void> deleteById(Long id) {
 		// TODO Auto-generated method stub
-		baseDao.deleteById(id);
-		return Mono.create(entityMonoSink -> entityMonoSink.success());
+		return baseDao.deleteById(id);
 	}
 
 	@Override
-	public Mono<Boolean> delete(T entity) {
+	public Mono<Void> delete(T entity) {
 		// TODO Auto-generated method stub
-		baseDao.delete(entity);
-		return Mono.create(entityMonoSink -> entityMonoSink.success());
+		return baseDao.delete(entity);
 	}
 
 	@Override

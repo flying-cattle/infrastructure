@@ -36,7 +36,17 @@ public class CommodityController extends AbstractController<CommodityService, Co
 		if (!vr.isHasErrors()) {
 			return baseService.insert(obj);
 		} else {
-			throw new Exception(vr.getFirstErrors());
+			return Mono.error(new Exception(vr.getFirstErrors()));
 		}
+		//logger.info("本次添加的ID"+id);
+		//return Mono.just("success");
+	}
+	
+	
+	@GetMapping("/deleteById")
+	public Mono<String> deleteById(Long id) {
+		return baseService.deleteById(id)
+				.then(Mono.just("ok"))
+				.defaultIfEmpty("not found");
 	}
 }

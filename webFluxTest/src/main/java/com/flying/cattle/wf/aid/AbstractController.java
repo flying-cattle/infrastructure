@@ -46,15 +46,19 @@ public class AbstractController<S extends IService<T>,T extends ParentEntity>{
 	}
 
 	@PostMapping("/deleteById")
-	public Mono<Boolean> deleteById(Long id) {
+	public Mono<String> deleteById(Long id) {
 		// TODO Auto-generated method stub
-		return baseService.deleteById(id);
+		return baseService.deleteById(id)
+				.then(Mono.just("ok"))
+				.defaultIfEmpty("not found");
 	}
 
 	@PostMapping("/delete")
-	public Mono<Boolean> delete(T entity) {
+	public Mono<String> delete(T entity) {
 		// TODO Auto-generated method stub
-		return baseService.delete(entity);
+		return baseService.delete(entity)
+				.then(Mono.just("ok"))
+				.defaultIfEmpty("not found");
 	}
 
 	@PostMapping("/updateById")
