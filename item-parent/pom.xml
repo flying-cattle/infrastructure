@@ -29,7 +29,7 @@
 		<druid-spring-boot-starter.version>1.1.14</druid-spring-boot-starter.version>
 		<springfox-swagger2>2.8.0</springfox-swagger2>
 		<pagehelper-spring-boot-starter.version>1.2.10</pagehelper-spring-boot-starter.version>
-		<fastjson.version>1.2.57</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<oauth.version>2.3.5.RELEASE</oauth.version>
 	</properties>
 
