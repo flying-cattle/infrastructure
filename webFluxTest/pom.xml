@@ -22,7 +22,7 @@
 		<java.version>1.8</java.version>
 		<!-- jar version -->
 		<mybatis-dsc-generator.version>3.0.3.RELEASE</mybatis-dsc-generator.version>
-		<fastjson.version>1.2.57</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 	</properties>
 
 	<dependencies>
